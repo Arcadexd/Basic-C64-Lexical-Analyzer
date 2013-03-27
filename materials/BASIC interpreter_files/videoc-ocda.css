@@ -1,0 +1,279 @@
+/* $Id: videoc-ocda.css,v 1.1.1.1 2000/06/26 14:37:09 xleroy Exp $
+ * The cascading style sheet for VideoC.
+ * <Christian.Queinnec@lip6.fr>
+
+ * ATTENTION: Do not modify videoc.css but videoc.css.cpp instead!
+ * Colors and fonts are defined in videoc.colors.cpp.
+ */
+
+/* $Id: videoc-ocda.css,v 1.1.1.1 2000/06/26 14:37:09 xleroy Exp $
+ * Colors for the style sheets of VideoC.
+ * <Christian.Queinnec@lip6.fr>
+
+ * They are used to regenerates the videoc*.css files.
+
+ NOTE: Arial does not seem to use the ISO encoding: e' is correct
+       but e` a` are incorrect. Revert to Times everywhere.
+ */
+
+
+
+
+
+
+
+
+
+/* end of videoc.colors.cpp */
+
+
+BODY, .regularBody {
+  font-family: "Times", serif ;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black ;
+  background-color: #ffffff ;
+}
+
+.topic, .subtopic, .subsubtopic, .lesson, .solution, .exotext {
+  font-size: 80%;
+  color: black ;
+  font-size: medium;
+}
+
+A, .reference {
+  color: seagreen; /*rgb(231,141,57) ;*/
+  font-weight: bold;
+}
+
+.bannerText {
+  color: rgb(231,141,57) ;
+  font-weight: bold;
+}
+
+.banner, .bannerSolution {
+  color: rgb(231,141,57) ;
+  font-weight: bold;
+  align: center;
+  border: solid 0 black ;
+  padding: 0;
+}
+
+.tocAlphabet {
+ align: center;
+ font-size: 140%;
+}
+
+.detail {
+  display: inline;
+}
+
+.relatedTable {
+  align: center;
+  margin-left: 10;
+  margin-right: 10;
+  margin-top: 5;
+}
+.requiredTable TH, .requiredTable TD {
+  valign: top;
+  align: center;
+}
+.suggestedTable TH, .suggestedTable TD {
+  valign: top;
+  align: center;
+}
+
+.related, .credits {
+  font-family: "Times", serif ;
+  display: block;
+  font-size: 80%;
+  align: center;
+  width: 100%;
+  margin-right: 50%;
+  padding: 10px;
+  border: solid 2px rgb(231,141,57) ;
+  color: black ;
+  background-color: rgb(53, 229, 175) ;
+}
+.related A, .credits A {
+  color: black ;
+  font-weight: bold;
+}
+
+.authorEmail, .careTakerEmail {
+  width: 50%;
+  align: right;
+  font-family: "Times", serif ;
+  font-size: 80%;
+  color: red;
+}
+.suggested, .required {
+  display: wrap;
+  width: 100%;
+  align: right;
+  font-family: "Times", serif ;
+  font-size: 100%;
+  color: black ;
+}
+
+.wordSearch {
+  border-width: 3px;
+  border-color: blue;
+  background-color: lightblue;
+}
+
+h1 {
+  font-family: "Helvetica", serif ;
+  display: block;
+  align: center;
+  width: 100%;
+  padding: 10px;
+  border-width: 3px;
+  border-color: rgb(231,141,57) ;
+  font-size: 200%;
+  color: ivory;
+  background-color: steelblue;
+/* PeMOC background rgb(231,141,57) ;
+   color: #ffffff ; */
+}
+.specialH1 {
+  font-family: "Times", serif ;
+  display: block;
+  align: center;
+  width: 100%;
+  padding: 10px;
+  border-width: 3px;
+  border-color: rgb(231,141,57) ;
+  font-size: 200%;
+  color: black ;
+  background-color: white;
+}
+h2, .topicHeader, .lessonHeader, .exerciseHeader, .answerHeader {
+  font-family: "Helvetica", serif ;
+  display: block;
+  width: 100%;
+  align: center;
+  padding: 10px;
+  font-size:  200%;
+  color: ivory; /*gold; *//*steelblue; */
+  background-color: steelblue; /*rgb(213,141,57);*/
+/*darkblue;*/
+/* PeMOC rgb(231,141,57) ;
+  color: #ffffff ; 
+*/
+}
+h3, .subtopicHeader {
+  display: block;
+  align: center;
+  width: 100%;
+  padding: 5px;
+  font-size: 140%;
+  color: ivory; 
+  background-color: steelblue; 
+/*  color: rgb(231,141,57) ; */
+/*  background-color: #ffffff ;*/
+}
+h4, .subsubtopicheader {
+  display: block;
+  align: center;
+  width: 100%;
+  padding: 1px;
+  font-size: 100%;
+  font-style: italic;
+  color: ivory; 
+  background-color: steelblue; 
+/*  color: rgb(231,141,57) ;
+  background-color: #ffffff ; */
+}
+
+.message {
+  align: center;
+  padding: 10px;
+  width: 66%;
+  font-size: 130%;
+  font-style: bolder;
+  color: rgb(231,141,57) ;
+  background-color: rgb(248,255,222) ;
+  border: solid thick rgb(231,141,57) ;
+}
+
+/* The overall style for code excerpts. */
+
+.codeInline {
+  font-family: monospace;
+}
+
+.code, .c, .scheme, .tex, .perl, .sh, .asm, .makefile, .gdb, .shc, .syntax, .pascal, .texForAnnote, .texForSty, .schemeSlide, .vi {
+  font-family: monospace;
+  margin-left: 20;
+  margin-right: 20;
+  margin-top: 5;
+  margin-bottom: 5;
+  padding: 5px;
+  color: red;
+  background-color: rgb(248,255,222) ;
+  border: solid thin rgb(231,141,57) ;
+}
+PRE {
+  font-family: monospace;
+  white-space: pre;
+  margin-left: 20;
+  margin-right: 20;
+  margin-top: 5;
+  margin-bottom: 5;
+  padding: 5px;
+  color: darkblue ;
+  background-color: rgb(238,238,224); /*ivory;*/ /*beige;*/ /*sienna; *//*indianred; *//*orange;*/
+  /* PeMOC color: red;   background-color: rgb(248,255,222) ; */
+  border: solid thin rgb(231,141,57) ;
+}
+
+.inclusion, .cInclusion, .texForAnnoteInclusion, .shInclusion, .perlInclusion, .texInclusion, .schemeSlideComment, .schemeInclusion, .schemeComment {
+  color: purple;
+  background-color: rgb(248,255,222) ;
+}
+
+/* Anchors that are mouse-sensitive should not be too emphasized
+ * certainly not as a real anchor. */
+
+.mousable {
+  color: coral; /*seagreen; *//*steelblue;*/
+/* PeMOC   color: blue; */
+  text-decoration: none ! important;
+}
+
+/* The overall style for popups. Popups appear when moused over. 
+ * They stay or disappear, permanently, if clicked over. */
+
+.hint {
+  color: darkblue;
+  padding: 5px;
+  margin: 5px;
+  font-size: medium;
+/*  background-color: rgb(53, 229, 175) ;*/
+  background-color :  orange;
+  border: solid thin red;
+}
+
+/* For QCM */
+
+.okChoice {
+  color: green;
+  margin-left: 20;
+}
+
+.koChoice {
+  color: red;
+  margin-left: 20;
+}
+
+/* end of videoc.css */
+
+
+
+
+
+
+
+
+

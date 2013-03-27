@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0039)http://www.c64-wiki.com/index.php/BASIC -->
+<html lang="en" dir="ltr" style="zoom: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>BASIC - C64-Wiki</title>
+
+<meta name="generator" content="MediaWiki 1.16.0">
+<link rel="alternate" type="application/x-wiki" title="Edit" href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit">
+<link rel="edit" title="Edit" href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit">
+<link rel="shortcut icon" href="http://www.c64-wiki.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.c64-wiki.com/opensearch_desc.php" title="C64-Wiki (en)">
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="C64-Wiki Atom feed" href="http://www.c64-wiki.com/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="stylesheet" href="http://www.c64-wiki.com/skins/common/shared.css?270" media="screen">
+<link rel="stylesheet" href="http://www.c64-wiki.com/skins/common/commonPrint.css?270" media="print">
+<link rel="stylesheet" href="http://www.c64-wiki.com/skins/monobook/main.css?270" media="screen">
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?270" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?270" media="screen" /><![endif]-->
+<link rel="stylesheet" href="http://www.c64-wiki.com/index.php?title=MediaWiki:Common.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000">
+<link rel="stylesheet" href="http://www.c64-wiki.com/index.php?title=MediaWiki:Print.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000" media="print">
+<link rel="stylesheet" href="http://www.c64-wiki.com/index.php?title=MediaWiki:Monobook.css&usemsgcache=yes&ctype=text%2Fcss&smaxage=18000&action=raw&maxage=18000">
+<link rel="stylesheet" href="http://www.c64-wiki.com/index.php?title=-&action=raw&maxage=18000&gen=css">
+<script>
+var skin="monobook",
+stylepath="/skins",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/index.php/$1",
+wgScriptPath="",
+wgScriptExtension=".php",
+wgScript="/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://www.c64-wiki.com",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="BASIC",
+wgTitle="BASIC",
+wgAction="view",
+wgArticleId=1418,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=12323,
+wgVersion="1.16.0",
+wgEnableAPI=false,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "C64-Wiki", "5": "C64-Wiki talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "100": "Portal", "101": "Portal Talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "c64-wiki": 4, "c64-wiki_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "portal": 100, "portal_talk": 101, "image": 6, "image_talk": 7},
+wgSiteName="C64-Wiki",
+wgCategories=["BASIC", "Coding Language"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[];
+</script><script src="./BASIC - C64-Wiki_files/wikibits.js"></script><style type="text/css"></style>
+<script src="./BASIC - C64-Wiki_files/ajax.js"></script>
+<script>/*<![CDATA[*/
+currentTableSort = new Array();
+
+function initTableSort() {
+	var allTH = document.getElementsByTagName('th');
+	for (var i = 0; i <= allTH.length; i++) {
+		if (allTH[i]) {
+			if (allTH[i].getAttribute('colspan') <= 1) {
+				allTH[i].innerHTML = '<a onclick="tableSortClick(' + i + ');">' + allTH[i].innerHTML + '</a>';
+			}
+			currentTableSort[i] = 0;
+		}
+	}
+}
+function fnrowsort(a, b) {
+	return (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : a[2] - b[2]);
+}
+function tableSortClick(idx) {
+	var oldStatus = window.status;
+	window.status = 'Sorting...';
+	currentTableSort[idx] = 1 - currentTableSort[idx];
+	var th = document.getElementsByTagName('th')[idx];
+	var tr;
+	for (tr = th; tr.tagName != 'TR'; tr = tr.parentNode);
+//	var table;
+//	for (table = tr; table.tagName != 'TABLE'; table = table.parentNode);
+	var sn = tr.childNodes;
+	var col = 0;
+	for (var i = 0; i < sn.length; i++) {
+		if (sn[i] == th) col = i;
+	}
+	var container = tr.parentNode;
+	var isNum = 1;
+	for (i = 1; i < container.childNodes.length; i++) {
+		if (container.childNodes[i].tagName == 'TR') {
+			if (isNaN(Number(container.childNodes[i].childNodes[col].innerHTML.replace(/,/, '.')))) {
+				if ((container.childNodes[i].childNodes[col].innerHTML != '-') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != '') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != ' ') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != 'X') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != '/') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != '&nbsp;') &&
+				    (container.childNodes[i].childNodes[col].innerHTML != '?')) {
+				  //alert(container.childNodes[i].childNodes[col].innerHTML);
+					isNum = 0;
+					i = container.childNodes.length;
+				}
+			}
+		}
+	}
+	var sortRows = new Array();
+	for (i = 1; i < container.childNodes.length; i++) {
+		if (container.childNodes[i].tagName == 'TR') {
+			var data = container.childNodes[i].childNodes[col].innerHTML;
+			if (isNum) {
+				data = Number(data.replace(/,/, '.'));
+				if (isNaN(data)) data = 0;
+			}
+			sortRows[sortRows.length] = new Array(data, container.childNodes[i], i);
+		}
+	}
+	sortRows.sort(fnrowsort);
+	if (currentTableSort[idx] != 1) sortRows.reverse();
+	for (i = 1; i < sortRows.length; i++) {
+		container.appendChild(sortRows[i][1]);
+	}
+	window.status = oldStatus;
+}
+window.onload = initTableSort;
+/*]]>*/</script>
+<script src="./BASIC - C64-Wiki_files/index.php"></script>
+
+</head>
+<body class="mediawiki ltr ns-0 ns-subject page-BASIC skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">BASIC</h1>
+	<div id="bodyContent">
+		<h3 id="siteSub">From C64-Wiki</h3>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Jump to: <a href="http://www.c64-wiki.com/index.php/BASIC#column-one">navigation</a>, <a href="http://www.c64-wiki.com/index.php/BASIC#searchInput">search</a></div>
+		<!-- start content -->
+<p>The acronym <b>BASIC</b> stands for "<b>B</b>eginner’s <b>A</b>ll-purpose <b>S</b>ymbolic <b>I</b>nstruction <b>C</b>ode", which used to be a very famous programming language from the 70s to the 90s. It was invented in 1964 by John George Kemeny and Thomas Eugene Kurtz. During the last decades various BASIC-dialects have emerged. This article informs you about BASIC for <a href="http://www.c64-wiki.com/index.php/Commodore" title="Commodore">Commodore</a> computers.
+</p>
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a id="togglelink" class="internal" href="javascript:toggleToc()">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://www.c64-wiki.com/index.php/BASIC#CBM-BASIC"><span class="tocnumber">1</span> <span class="toctext">CBM-BASIC</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="http://www.c64-wiki.com/index.php/BASIC#Overview_BASIC-Keywords_Version_2.0"><span class="tocnumber">2</span> <span class="toctext">Overview BASIC-Keywords Version 2.0</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="http://www.c64-wiki.com/index.php/BASIC#Complementary_Overview_of_BASIC-Keywords_Version_3.5"><span class="tocnumber">3</span> <span class="toctext">Complementary Overview of BASIC-Keywords Version 3.5</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="http://www.c64-wiki.com/index.php/BASIC#Complementary_Overview_of_BASIC-Keywords_Version_7.0"><span class="tocnumber">4</span> <span class="toctext">Complementary Overview of BASIC-Keywords Version 7.0</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="http://www.c64-wiki.com/index.php/BASIC#Links"><span class="tocnumber">5</span> <span class="toctext">Links</span></a></li>
+</ul>
+</td></tr></tbody></table><script>if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<h2><span class="editsection">[<a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit&section=1" title="Edit section: CBM-BASIC">edit</a>]</span> <span class="mw-headline" id="CBM-BASIC"> CBM-BASIC </span></h2>
+<p>From the series of <a href="http://www.c64-wiki.com/index.php/PET_2001" title="PET 2001">PET/CBM 2001</a> to the <a href="http://www.c64-wiki.com/index.php/home_computer" title="home computer" class="mw-redirect">home computers</a> <a href="http://www.c64-wiki.com/index.php/C64" title="C64">C64</a>/<a href="http://www.c64-wiki.com/index.php/C128" title="C128" class="mw-redirect">128</a>/<a href="http://www.c64-wiki.com/index.php?title=C128DCR&action=edit&redlink=1" class="new" title="C128DCR (page does not exist)">D/DCR</a> and <a href="http://www.c64-wiki.com/index.php/VC_10" title="VC 10" class="mw-redirect">VC10</a>/<a href="http://www.c64-wiki.com/index.php/VC_20" title="VC 20" class="mw-redirect">20</a>, <a href="http://www.c64-wiki.com/index.php/C16" title="C16" class="mw-redirect">C16</a>/<a href="http://www.c64-wiki.com/index.php/C116" title="C116" class="mw-redirect">116</a>, <a href="http://www.c64-wiki.com/index.php/Plus/4" title="Plus/4">Plus/4</a>, C65, Commodore used an individually developed BASIC-version termed CBM-BASIC. There are several sub-dialects of which BASIC-Version 2.0 is the most popular.
+</p><p>Commodore developed their BASIC under licence of Microsoft in the year 1977 for their systems. On Commodore systems BASIC is not only used as programming language, but also as operating system. BASIC is configured on a <a href="http://www.c64-wiki.com/index.php/ROM" title="ROM">ROM</a>-chip.
+</p>
+<h2><span class="editsection">[<a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit&section=2" title="Edit section: Overview BASIC-Keywords Version 2.0">edit</a>]</span> <span class="mw-headline" id="Overview_BASIC-Keywords_Version_2.0"> Overview BASIC-Keywords Version 2.0 </span></h2>
+<p>BASIC version 2.0 allows 71 BASIC-Commands in C64/VC20 resp. C128/D/DCR:
+</p>
+<table border="2" cellspacing="0" cellpadding="4" style="margin:1em 1em 1em 0; border-style:solid; border-width:1px; border-collapse:collapse; empty-cells:show">
+<tbody><tr>
+<td width="16%"> <a href="http://www.c64-wiki.com/index.php/ABS" title="ABS">ABS</a> </td><td width="16%"> <a href="http://www.c64-wiki.com/index.php/AND_(BASIC)" title="AND (BASIC)">AND</a> </td><td width="16%"> <a href="http://www.c64-wiki.com/index.php/ASC" title="ASC">ASC</a> </td><td width="16%"> <a href="http://www.c64-wiki.com/index.php/ATN" title="ATN">ATN</a> </td><td width="16%"> <a href="http://www.c64-wiki.com/index.php/CHR$" title="CHR$">CHR$</a> </td><td width="16%"> <a href="http://www.c64-wiki.com/index.php/CLOSE" title="CLOSE">CLOSE</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/CLR" title="CLR">CLR</a> </td><td> <a href="http://www.c64-wiki.com/index.php/CMD" title="CMD">CMD</a> </td><td> <a href="http://www.c64-wiki.com/index.php/CONT" title="CONT">CONT</a> </td><td> <a href="http://www.c64-wiki.com/index.php/COS" title="COS">COS</a> </td><td> <a href="http://www.c64-wiki.com/index.php/DATA" title="DATA">DATA</a> </td><td> <a href="http://www.c64-wiki.com/index.php/DEF" title="DEF">DEF</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/DIM" title="DIM">DIM</a> </td><td> <a href="http://www.c64-wiki.com/index.php/END" title="END">END</a> </td><td> <a href="http://www.c64-wiki.com/index.php/EXP" title="EXP">EXP</a> </td><td> <a href="http://www.c64-wiki.com/index.php/FN" title="FN">FN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/FOR" title="FOR">FOR</a> </td><td> <a href="http://www.c64-wiki.com/index.php/FRE" title="FRE">FRE</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/GET" title="GET">GET</a> </td><td> <a href="http://www.c64-wiki.com/index.php/GET(hash)" title="GET(hash)">GET#</a> </td><td> <a href="http://www.c64-wiki.com/index.php/GOSUB" title="GOSUB">GOSUB</a> </td><td> <a href="http://www.c64-wiki.com/index.php/GOTO" title="GOTO">GOTO</a> </td><td> <a href="http://www.c64-wiki.com/index.php/IF" title="IF">IF</a> </td><td> <a href="http://www.c64-wiki.com/index.php/INPUT" title="INPUT">INPUT</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/INPUT(hash)" title="INPUT(hash)">INPUT#</a> </td><td> <a href="http://www.c64-wiki.com/index.php/INT" title="INT">INT</a> </td><td> <a href="http://www.c64-wiki.com/index.php/LEFT$" title="LEFT$">LEFT$</a> </td><td> <a href="http://www.c64-wiki.com/index.php/LEN" title="LEN">LEN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/LET" title="LET">LET</a> </td><td> <a href="http://www.c64-wiki.com/index.php/LIST" title="LIST">LIST</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/LOAD" title="LOAD">LOAD</a> </td><td> <a href="http://www.c64-wiki.com/index.php/LOG" title="LOG">LOG</a> </td><td> <a href="http://www.c64-wiki.com/index.php/MID$" title="MID$">MID$</a> </td><td> <a href="http://www.c64-wiki.com/index.php/NEW" title="NEW">NEW</a> </td><td> <a href="http://www.c64-wiki.com/index.php/NEXT" title="NEXT">NEXT</a> </td><td> <a href="http://www.c64-wiki.com/index.php/NOT" title="NOT">NOT</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/ON" title="ON">ON</a> </td><td> <a href="http://www.c64-wiki.com/index.php/OPEN" title="OPEN">OPEN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/OR" title="OR">OR</a> </td><td> <a href="http://www.c64-wiki.com/index.php/PEEK" title="PEEK">PEEK</a> </td><td> <a href="http://www.c64-wiki.com/index.php/POKE" title="POKE">POKE</a> </td><td> <a href="http://www.c64-wiki.com/index.php/POS" title="POS">POS</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/PRINT" title="PRINT">PRINT</a> </td><td> <a href="http://www.c64-wiki.com/index.php/PRINT(hash)" title="PRINT(hash)">PRINT#</a> </td><td> <a href="http://www.c64-wiki.com/index.php/READ" title="READ">READ</a> </td><td> <a href="http://www.c64-wiki.com/index.php/REM" title="REM">REM</a> </td><td> <a href="http://www.c64-wiki.com/index.php/RESTORE_(BASIC)" title="RESTORE (BASIC)">RESTORE</a> </td><td> <a href="http://www.c64-wiki.com/index.php/RETURN" title="RETURN">RETURN</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/RIGHT$" title="RIGHT$">RIGHT$</a> </td><td> <a href="http://www.c64-wiki.com/index.php/RND" title="RND">RND</a> </td><td> <a href="http://www.c64-wiki.com/index.php/RUN_(BASIC)" title="RUN (BASIC)">RUN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/SAVE" title="SAVE">SAVE</a> </td><td> <a href="http://www.c64-wiki.com/index.php/SGN" title="SGN">SGN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/SIN" title="SIN">SIN</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/SPC(" title="SPC(">SPC(</a> </td><td> <a href="http://www.c64-wiki.com/index.php/SQR" title="SQR">SQR</a> </td><td> <a href="http://www.c64-wiki.com/index.php/STATUS" title="STATUS">STATUS</a> (short ST) </td><td> <a href="http://www.c64-wiki.com/index.php/STEP" title="STEP">STEP</a> </td><td> <a href="http://www.c64-wiki.com/index.php/STOP" title="STOP">STOP</a> </td><td> <a href="http://www.c64-wiki.com/index.php/STR$" title="STR$">STR$</a>
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/SYS" title="SYS">SYS</a> </td><td> <a href="http://www.c64-wiki.com/index.php/TAB(" title="TAB(">TAB(</a> </td><td> <a href="http://www.c64-wiki.com/index.php/TAN" title="TAN">TAN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/THEN" title="THEN">THEN</a> </td><td> <a href="http://www.c64-wiki.com/index.php/TIME" title="TIME">TIME</a> (short TI) </td><td> <a href="http://www.c64-wiki.com/index.php/TIME$" title="TIME$">TIME$</a> (short (TI$)
+</td></tr>
+<tr>
+<td> <a href="http://www.c64-wiki.com/index.php/TO" title="TO">TO</a> </td><td> <a href="http://www.c64-wiki.com/index.php/USR" title="USR">USR</a> </td><td> <a href="http://www.c64-wiki.com/index.php/VAL" title="VAL">VAL</a> </td><td> <a href="http://www.c64-wiki.com/index.php/VERIFY" title="VERIFY">VERIFY</a> </td><td> <a href="http://www.c64-wiki.com/index.php/WAIT" title="WAIT">WAIT</a> </td><td> &nbsp;
+</td></tr></tbody></table>
+<h2><span class="editsection">[<a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit&section=3" title="Edit section: Complementary Overview of BASIC-Keywords Version 3.5">edit</a>]</span> <span class="mw-headline" id="Complementary_Overview_of_BASIC-Keywords_Version_3.5"> Complementary Overview of BASIC-Keywords Version 3.5 </span></h2>
+<p>BASIC 3.5 is an enhanced version of Commodore BASIC version 2.0 and has been integrated in the home computers C16/116 and Plus/4:
+</p>
+<table border="2" cellspacing="0" cellpadding="4" style="margin:1em 1em 1em 0; border-style:solid; border-width:1px; border-collapse:collapse; empty-cells:show">
+<tbody><tr>
+<td width="16%"> AUTO </td><td width="16%"> BACKUP </td><td width="16%"> BOX </td><td width="16%"> CHAR </td><td width="16%"> CIRCLE </td><td width="16%"> COLLECT
+</td></tr>
+<tr>
+<td> COLOR </td><td> COPY </td><td>DEC </td><td> DELETE </td><td> DIRECTORY </td><td> DLOAD
+</td></tr>
+<tr>
+<td> DO </td><td> DRAW </td><td> DS </td><td> DS$ </td><td> DSAVE </td><td> EL
+</td></tr>
+<tr>
+<td> ELSE </td><td> ER </td><td> ERR$ </td><td> EXIT </td><td> GETKEY </td><td> GRAPHIC
+</td></tr>
+<tr>
+<td> GSHAPE </td><td> HEADER </td><td> HELP </td><td> HEX$ </td><td> INSTR </td><td> JOY
+</td></tr>
+<tr>
+<td> KEY </td><td> LOCATE </td><td> LOOP </td><td> MONITOR </td><td> PAINT </td><td> PRINTUSING
+</td></tr>
+<tr>
+<td> PUDEF </td><td> RCLR </td><td> RDOT </td><td> RENAME </td><td> RENUMBER </td><td> RESUME
+</td></tr>
+<tr>
+<td> RGR </td><td> RLUM </td><td> SCALE </td><td> SCNCLR </td><td> SCRATCH </td><td> SOUND
+</td></tr>
+<tr>
+<td> SSHAPE </td><td> TRAP </td><td> TROFF </td><td> TRON </td><td> UNTIL </td><td> VOL
+</td></tr>
+<tr>
+<td> WHILE</td><td> </td><td> </td><td> </td><td> </td><td>
+</td></tr></tbody></table>
+<h2><span class="editsection">[<a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit&section=4" title="Edit section: Complementary Overview of BASIC-Keywords Version 7.0">edit</a>]</span> <span class="mw-headline" id="Complementary_Overview_of_BASIC-Keywords_Version_7.0"> Complementary Overview of BASIC-Keywords Version 7.0 </span></h2>
+<p>As a further enhancement of <a href="http://www.c64-wiki.com/index.php/Commodore" title="Commodore">Commodore</a> BASIC version 3.5, which is integrated into the C128/D/DCR, the following commands have been added in V 7.0:
+</p>
+<ul><li>APPEND
+</li><li>BANK
+</li><li>BEGIN
+</li><li>BEND
+</li><li>BLOAD
+</li><li>BOOT
+</li><li>BSAVE
+</li><li>BUMP
+</li><li>CATALOG
+</li><li>CHAR
+</li><li>CIRCLE
+</li><li>COLLISION
+</li><li>CONCAT
+</li><li>DCLEAR
+</li><li>DCLOSE
+</li><li>DOPEN
+</li><li>DVERIFY
+</li><li>ENVELOPE
+</li><li>FAST
+</li><li>FETCH
+</li><li>FILTER
+</li><li>GO64
+</li><li>MOVSPR
+</li><li>PEN
+</li><li>PLAY
+</li><li>POINTER
+</li><li>POT
+</li><li>RECORD
+</li><li>RREG
+</li><li>RSPCOLOR
+</li><li>RSPPOS
+</li><li>RSRPITE
+</li><li>RWINDOW
+</li><li>SLEEP
+</li><li>SLOW
+</li><li>SPRCOLOR
+</li><li>SPRDEF
+</li><li>SPRITE
+</li><li>SPRSAV
+</li><li>STASH
+</li><li>SWAP
+</li><li>TEMPO
+</li><li>TRAP
+</li><li>WIDTH
+</li><li>WINDOW
+</li><li>XOR
+</li></ul>
+<h2><span class="editsection">[<a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit&section=5" title="Edit section: Links">edit</a>]</span> <span class="mw-headline" id="Links"> Links </span></h2>
+<table border="0" cellspacing="1" style="background-color:transparent">
+<tbody><tr>
+<td> <span style="position:relative; overflow:hidden; width:18px; height:11px; z-index:2;"><a href="http://www.c64-wiki.com/index.php/File:WP-W11.png" class="image"><img alt="WP-W11.png" src="./BASIC - C64-Wiki_files/WP-W11.png" width="18" height="11"></a><span style="position:absolute; top:0; left:0; padding-top:3px; z-index:3;"><a href="http://www.c64-wiki.com/index.php?title=WikipediaDE:Hauptseite&action=edit&redlink=1" class="new" title="WikipediaDE:Hauptseite (page does not exist)"><span style="float:left; width:18px; height:11px; font-size:11px; line-height:11px; word-spacing:18px; cursor:pointer;"></span></a></span></span>
+</td><td align="left"> <b><a href="http://en.wikipedia.org/wiki/BASIC" class="external text" rel="nofollow">Wikipedia: BASIC</a></b>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<ul><li><a href="http://www.homecomputermuseum.de/doku/man17_de.htm" class="external text" rel="nofollow">Basics Informations BASIC V2 at www.homecomputermuseum.de </a><a href="http://www.c64-wiki.com/index.php/File:flag_de_18px.gif" class="image" title="Language German"><img alt="Language German" src="./BASIC - C64-Wiki_files/flag_de_18px.gif" width="18" height="11"></a>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 50/1000000
+Post-expand include size: 928/2097152 bytes
+Template argument size: 64/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key db1057211-en-wiki_:pcache:idhash:1418-0!1!0!!en!2 and timestamp 20130320215221 -->
+<div class="printfooter">
+Retrieved from "<a href="./BASIC - C64-Wiki_files/BASIC - C64-Wiki.html">http://www.c64-wiki.com/index.php/BASIC</a>"</div>
+		<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://www.c64-wiki.com/index.php/Special:Categories" title="Special:Categories">Categories</a>: <span dir="ltr"><a href="http://www.c64-wiki.com/index.php/Category:BASIC" title="Category:BASIC">BASIC</a></span> | <span dir="ltr"><a href="http://www.c64-wiki.com/index.php/Category:Coding_Language" title="Category:Coding Language">Coding Language</a></span></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="./BASIC - C64-Wiki_files/BASIC - C64-Wiki.html" title="View the content page [ctrl-alt-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="http://www.c64-wiki.com/index.php/Talk:BASIC" title="Discussion about the content page [ctrl-alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="http://www.c64-wiki.com/index.php?title=BASIC&action=edit" title="You can edit this page. Please use the preview button before saving [ctrl-alt-e]" accesskey="e">Edit</a></li>
+				 <li id="ca-history"><a href="http://www.c64-wiki.com/index.php?title=BASIC&action=history" title="Past revisions of this page [ctrl-alt-h]" accesskey="h">History</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://www.c64-wiki.com/index.php?title=Special:UserLogin&returnto=BASIC" title="You are encouraged to log in; however, it is not mandatory [ctrl-alt-o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/skins/common/images/Logof135.gif);" href="http://www.c64-wiki.com/index.php/Main_Page" title="Visit the main page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-Navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-recentchanges"><a href="http://www.c64-wiki.com/index.php/Special:RecentChanges" title="The list of recent changes in the wiki [ctrl-alt-r]" accesskey="r">Recent changes</a></li>
+				<li id="n-Links"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Links">Links</a></li>
+				<li id="n-Random-Page"><a href="http://www.c64-wiki.com/index.php/Special:Random">Random Page</a></li>
+				<li id="n-Visual-Cat-Search"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:VCS">Visual Cat Search</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Help_and_Feedback">
+		<h5>Help and Feedback</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-FAQ"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:FAQ">FAQ</a></li>
+				<li id="n-Forum"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Forum">Forum</a></li>
+				<li id="n-Administrators"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Administrators">Administrators</a></li>
+				<li id="n-Guestbook"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Guestbook">Guestbook</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-C64-Games">
+		<h5>C64-Games</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Games"><a href="http://www.c64-wiki.com/index.php/Portal:Games">Games</a></li>
+				<li id="n-Golden-Games"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Golden_Games">Golden Games</a></li>
+				<li id="n-Highscore-Gallery"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Highscore_Gallery">Highscore Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Portals">
+		<h5>Portals</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Main-Portal"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Portal">Main Portal</a></li>
+				<li id="n-Applications"><a href="http://www.c64-wiki.com/index.php/Portal:Applications">Applications</a></li>
+				<li id="n-Coding"><a href="http://www.c64-wiki.com/index.php/Portal:Coding_languages">Coding</a></li>
+				<li id="n-Hardware"><a href="http://www.c64-wiki.com/index.php/Portal:Hardware">Hardware</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://www.c64-wiki.com/index.php" id="searchform">
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="searchInput" title="Search C64-Wiki" accesskey="f" type="search" name="search">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists">&nbsp;
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text">
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://www.c64-wiki.com/index.php/Special:WhatLinksHere/BASIC" title="List of all wiki pages that link here [ctrl-alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://www.c64-wiki.com/index.php/Special:RecentChangesLinked/BASIC" title="Recent changes in pages linked from this page [ctrl-alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="http://www.c64-wiki.com/index.php/Special:WikiFamilySSO?urlkey=d0a07ca94ec164425662c5a6cf161d97&url=http%3A%2F%2Fwww.c64-wiki.de%2Findex.php%2FSpecial%3AUpload&DO_NOT_SHARE_THIS_LINK=1" title="Upload files [ctrl-alt-u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="http://www.c64-wiki.com/index.php/Special:SpecialPages" title="List of all special pages [ctrl-alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://www.c64-wiki.com/index.php?title=BASIC&printable=yes" rel="alternate" title="Printable version of this page [ctrl-alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://www.c64-wiki.com/index.php?title=BASIC&oldid=12323" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>In other languages</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-de"><a href="http://www.c64-wiki.com/index.php/Special:WikiFamilySSO?urlkey=553dff4b49932ebd1774b5b96c230b43&url=http%3A%2F%2Fwww.c64-wiki.de%2Findex.php%2FBASIC&DO_NOT_SHARE_THIS_LINK=1">Deutsch</a></li>
+			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="./BASIC - C64-Wiki_files/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki"></a></div>
+	<ul id="f-list">
+		<li id="lastmod"> This page was last modified on 13 January 2012, at 17:44.</li>
+		<li id="viewcount">This page has been accessed 15,237 times.</li>
+		<li id="copyright">Content is available under <a href="http://www.gnu.org/copyleft/fdl.html" class="external ">GFDL</a>.</li>
+		<li id="privacy"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:Privacy_policy" title="C64-Wiki:Privacy policy">Privacy policy</a></li>
+		<li id="about"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:About" title="C64-Wiki:About">About C64-Wiki</a></li>
+		<li id="disclaimer"><a href="http://www.c64-wiki.com/index.php/C64-Wiki:General_disclaimer" title="C64-Wiki:General disclaimer">Disclaimers</a></li>
+	</ul>
+</div>
+</div>
+
+<script>if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.184 secs. -->
+</body></html>
