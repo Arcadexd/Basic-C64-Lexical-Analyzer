@@ -6,26 +6,35 @@ class LexicalAnalyzer
 	
 	def line_to_lexemes line
 		lexemes = []
-		lex = ""
+		to_analyze = []
+		token = ""
 		line.split("").each { |c| 
-			lex << c
-			# puts lex
-			if $WORDS.include?(lex) || $OPS.include?(lex) || $SYMBOLS.include?(lex)
-				lexemes << lex 
-				lex = ""
-				# print lex
+			token << c
+			if token.split("").last == " "
+				to_analyze << token
+				token = "" 
 				next
 			end
-			# lex.split("").each { |l| 
-			# 	if $OP.include?
+			if $WORDS.include?(token) || $OPS.include?(token) || $SYMBOLS.include?(token)
+				lexemes << token 
+				token = ""
+				# print token
+				next
+			end
+			# token.split("").each { |t| 
+			# 	if $OPS.include?(t) || $SYMBOLS.include?(t)
+			# 		lexemes << t
+			# 		# print t
+			# 	else
+			# 		to_analyze << t
+			# 	end
+			# 	token = token[1, t.length]
 			# }
-			if lex.split("").last == " "# || lex.split("").last == "\n"
-				lex = "" 
-				next
-			end
 		}
 		print lexemes
 		puts
+		# print to_analyze
+		# puts
 	end
 
 	def code_to_lexemes file
@@ -39,7 +48,4 @@ class LexicalAnalyzer
 		lexemes
 	end
 
-	
-	
-	
 end
