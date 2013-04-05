@@ -13,15 +13,33 @@ class LexicalAnalyzer
 			if chr == "\""
 				string = !string
 				tokens << line[last_token..end_token]
-				last_token=end_token
-		  end
-			if $OPS.include?(chr) or $SYMBOLS.include?(chr) or chr == " " and !string
-				tokens << line[last_token..end_token]
-				last_token=end_token
-		  end
-		  end_token+=1
+				last_token=end_token+1
+			end
+			if $OPS.include?(chr) and !string
+				if $OPS.include?(line[end_token+1])
+					tokens << line[last_token..end_token]
+					tokens << line[end_token..end_token+1]
+					last_token=end_token+2
+					end_token+=1
+				else
+					tokens << line[end_token..end_token]
+					last_token=end_token+1
+				end
+			end
+			if $SYMBOLS.include?(chr) and !string
+					tokens << line[end_token..end_token]
+					last_token=end_token+1
+			end
+			if chr == " " and !string
+					tokens << line[last_token..end_token]
+					last_token=end_token+1
+			end
+			if chr == "\n"
+				tokens << line[last_token..end_token-1]
+			end
+				end_token+=1
 		}
-		 print tokens
+		print tokens
 	end
 
 	def classify_tokens_to_lexemes tokens
@@ -53,10 +71,10 @@ class LexicalAnalyzer
 		lines = file.split("\n")
 		lexemes = []
 		lines.each_with_index do |l, i|  
-			puts i+1
-			lexemes << line_to_lexemes(l)
+			puts
+			lexemes << line_to_lexemes(l+"\n")
 		end
-		# puts lexemes
+		puts
 		lexemes
 	end
 
